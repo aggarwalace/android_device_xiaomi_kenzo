@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/kenzo
+DEVICE_PATH := device/xiaomi/hydrogen
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -23,7 +23,7 @@ TARGET_BOARD_PLATFORM := msm8952
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := kenzo
+TARGET_BOOTLOADER_BOARD_NAME := hydrogen
 TARGET_NO_BOOTLOADER := true
 
 # Architecture
@@ -56,7 +56,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_APPEND_DTB := true
-KERNEL_DEFCONFIG := kenzo_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/hydrogen
+KERNEL_DEFCONFIG := lineageos_hydrogen_defconfig
 #TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Lights
@@ -218,4 +219,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/xiaomi/kenzo/BoardConfigVendor.mk
+-include vendor/xiaomi/hydrogen/BoardConfigVendor.mk
